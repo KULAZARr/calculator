@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .error{
+            color: red;
+        }
+        body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #8400ff, #ff9100);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: minmax(1px, auto) repeat(1, 25px);
+}
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+   
+    <input id="num1" >
+ 
+    <div id="operator_btns">
+        <button id="plus" onclick="sumb('+')">+</button>
+        <button id="minus" onclick="sumb('-')">-</button>
+      </div>
+      <input id="num2" />
+	<br>
+    <button onclick="test()">Посчитать</button>
+    
+    <p id="result"></p>
+</body>
+<script>
+    var operation; 
+    var symbol;
+    var num1;
+    var num2;
+    var result;
+    
+    function test() {
+        var num1 = Number(document.getElementById("num1").value);
+    var num2 = Number(document.getElementById("num2").value);
+        if (symbol == '+'){
+            
+          alert(num1 + num2) 
+          
+        }
+        if (symbol == '-'){
+            
+        alert(num1 - num2)
+            
+          }
+
+        
+    
+
+}
+function sumb(symb){
+          symbol = symb
+       
+
+  }
+</script>
+</html>
+
+
+
